@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const OrganizationalChart = () => {
-  const imagePath = "/هيكل المؤسسة.png"; 
+  const imagePath = "/institution_structure.png"; 
 
   return (
     <div className="w-full h-full flex items-center justify-center overflow-hidden">
@@ -14,7 +14,6 @@ const OrganizationalChart = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-full h-full flex items-center justify-center"
       >
-        {/* تكبير الصورة لتشغل كامل العرض والارتفاع المتاح تقريباً */}
         <img 
           src={imagePath} 
           alt="الهيكل التنظيمي للمؤسسة" 

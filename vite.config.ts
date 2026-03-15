@@ -9,11 +9,6 @@ export default defineConfig(() => ({
     host: "::",
     port: 8080,
   },
-  build: {
-    rollupOptions: {
-      external: ['workbox-window']
-    }
-  },
   plugins: [
     dyadComponentTagger(), 
     react(),
@@ -24,14 +19,14 @@ export default defineConfig(() => ({
         'favicon.ico', 
         'robots.txt', 
         'Picture1.png', 
-        'هيكل المؤسسة.png', 
+        'institution_structure.png', 
         'mcd.png', 
-        'مخطط تدفق المعلومات.png', 
-        'مخطط الأجائات.png', 
-        'مخطط الأرتباط الوضيفي.png',
-        'WhatsApp Image 2026-03-15 at 9.30.47 AM.jpeg',
-        'WhatsApp Image 2026-03-15 at 9.30.49 AM.jpeg',
-        'WhatsApp Image 2026-03-15 at 9.30.49 AM (1).jpeg'
+        'data_flow_diagram.png', 
+        'procedures_diagram.png', 
+        'functional_linkage_diagram.png',
+        'app_main.jpg',
+        'app_reg.jpg',
+        'app_reports.jpg'
       ],
       manifest: {
         name: 'نظام تسيير الأمانة',
@@ -48,38 +43,44 @@ export default defineConfig(() => ({
             src: 'Picture1.png',
             sizes: '192x192',
             type: 'image/png',
-            purpose: 'any maskable'
+            purpose: 'any'
           },
           {
             src: 'Picture1.png',
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any maskable'
+            purpose: 'any'
+          },
+          {
+            src: 'Picture1.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable'
           }
         ]
       },
       workbox: {
-        // تضمين كافة أنواع الملفات في التخزين المؤقت المسبق
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,json,woff2}'],
-        // زيادة الحد الأقصى لحجم الملف المسموح بتخزينه (5 ميجابايت) لضمان تخزين الصور عالية الجودة
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        maximumFileSizeToCacheInBytes: 7 * 1024 * 1024, // 7MB لضمان استيعاب كافة المخططات
         cleanupOutdatedCaches: true,
+        skipWaiting: true,
+        clientsClaim: true,
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'google-fonts-cache',
+              cacheName: 'images-cache',
               expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365
+                maxEntries: 50,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 يوم
               },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          }
+            },
+          },
         ]
+      },
+      devOptions: {
+        enabled: true
       }
     })
   ],

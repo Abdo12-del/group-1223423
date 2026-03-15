@@ -31,7 +31,6 @@ const SLIDES = [
     desc: 'مذكرة نيل شهادة تقني سامي',
     content: (
       <div className="w-full h-full flex flex-col items-center justify-between py-2 text-center relative" dir="rtl">
-        {/* الصور في الزوايا العلوية */}
         <div className="absolute top-0 left-0 w-20 h-20 md:w-28 md:h-28 z-20">
           <img src="/Picture1.png" alt="Logo Left" className="w-full h-full object-contain" />
         </div>
@@ -39,18 +38,15 @@ const SLIDES = [
           <img src="/Picture1.png" alt="Logo Right" className="w-full h-full object-contain" />
         </div>
 
-        {/* عناصر ديكورية للخلفية */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl" />
         
-        {/* الهيدر العلوي */}
         <div className="space-y-0.5 relative z-10 mt-2">
           <h4 className="text-base md:text-lg font-black text-white">الجمهورية الجزائرية الديموقراطية الشعبية</h4>
           <h4 className="text-base md:text-lg font-black text-white">وزارة التكوين والتعليم المهنيين</h4>
           <h5 className="text-sm md:text-base font-bold text-blue-100/80">المعهد الوطني المتخصص في التكوين والتعليم المهني الشهيد عمامرة بشير</h5>
         </div>
 
-        {/* العنوان المركزي - تم توسيعه وإزالة overflow-hidden */}
         <div className="bg-white/10 backdrop-blur-2xl p-6 md:p-10 rounded-[3rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)] max-w-5xl w-full my-4 relative z-10">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
           
@@ -65,7 +61,6 @@ const SLIDES = [
           </div>
         </div>
 
-        {/* المؤطر والمتربصين */}
         <div className="grid grid-cols-2 gap-6 w-full max-w-5xl text-right relative z-10 mb-2">
           <div className="space-y-2 bg-white/5 backdrop-blur-md p-5 rounded-3xl border border-white/10 shadow-xl">
             <h3 className="text-lg font-black border-b border-white/20 pb-1 flex items-center gap-2 text-blue-200">
@@ -85,7 +80,6 @@ const SLIDES = [
           </div>
         </div>
 
-        {/* الفوتر */}
         <div className="relative z-10 pb-2">
           <p className="text-lg font-black tracking-widest text-blue-100">دفعة مارس 2026</p>
         </div>
@@ -139,7 +133,7 @@ const SLIDES = [
     chapter: 'الدراسة التمهيدية', 
     title: '2. الهيكل التنظيمي', 
     desc: 'توضيح حقل الدراسة ضمن الهيكل', 
-    content: <img src="/هيكل المؤسسة.png" alt="الهيكل التنظيمي" className="w-full h-full object-contain drop-shadow-2xl" />, 
+    content: <img src="/institution_structure.png" alt="الهيكل التنظيمي" className="w-full h-full object-contain drop-shadow-2xl" />, 
     icon: GitGraph, 
     color: 'bg-emerald-600',
     isFullImage: true
@@ -252,7 +246,7 @@ const SLIDES = [
     chapter: 'الدراسة التمهيدية', 
     title: '9. مثال على إجراء مدروس', 
     desc: 'مخطط إجراء التعهد والالتزام', 
-    content: <img src="/مخطط الأجائات.png" alt="مخطط الإجراءات" className="w-full h-full object-contain drop-shadow-2xl" />, 
+    content: <img src="/procedures_diagram.png" alt="مخطط الإجراءات" className="w-full h-full object-contain drop-shadow-2xl" />, 
     icon: Activity, 
     color: 'bg-emerald-700',
     isFullImage: true
@@ -262,7 +256,7 @@ const SLIDES = [
     chapter: 'الدراسة التمهيدية', 
     title: '10. مخطط تدفق المعلومات', 
     desc: 'تحليل التبادل المعلوماتي الخارجي والداخلي', 
-    content: <img src="/مخطط تدفق المعلومات.png" alt="مخطط تدفق المعلومات" className="w-full h-full object-contain drop-shadow-2xl" />, 
+    content: <img src="/data_flow_diagram.png" alt="مخطط تدفق المعلومات" className="w-full h-full object-contain drop-shadow-2xl" />, 
     icon: Share2, 
     color: 'bg-sky-800',
     isFullImage: true
@@ -398,7 +392,7 @@ const SLIDES = [
     chapter: 'الدراسة التصميمية', 
     title: '4. مخطط الارتباطات الوظيفية', 
     desc: 'التمثيل البياني للتبعات الوظيفية', 
-    content: <img src="/مخطط الأرتباط الوضيفي.png" alt="مخطط الارتباط الوظيفي" className="w-full h-full object-contain drop-shadow-2xl" />, 
+    content: <img src="/functional_linkage_diagram.png" alt="مخطط الارتباط الوظيفي" className="w-full h-full object-contain drop-shadow-2xl" />, 
     icon: GitBranch, 
     color: 'bg-rose-500',
     isFullImage: true
@@ -525,17 +519,17 @@ const SLIDES = [
       { 
         label: 'الواجهة الرئيسية', 
         icon: Monitor, 
-        content: <img src="/WhatsApp Image 2026-03-15 at 9.30.47 AM.jpeg" alt="الواجهة الرئيسية" className="w-full h-full object-contain drop-shadow-2xl" />
+        content: <img src="/app_main.jpg" alt="الواجهة الرئيسية" className="w-full h-full object-contain drop-shadow-2xl" />
       },
       { 
         label: 'واجهة التسجيل', 
         icon: Layout, 
-        content: <img src="/WhatsApp Image 2026-03-15 at 9.30.49 AM.jpeg" alt="واجهة التسجيل" className="w-full h-full object-contain drop-shadow-2xl" />
+        content: <img src="/app_reg.jpg" alt="واجهة التسجيل" className="w-full h-full object-contain drop-shadow-2xl" />
       },
       { 
         label: 'واجهة التقارير', 
         icon: FileText, 
-        content: <img src="/WhatsApp Image 2026-03-15 at 9.30.49 AM (1).jpeg" alt="واجهة التقارير" className="w-full h-full object-contain drop-shadow-2xl" />
+        content: <img src="/app_reports.jpg" alt="واجهة التقارير" className="w-full h-full object-contain drop-shadow-2xl" />
       }
     ],
     icon: Monitor, 
@@ -601,7 +595,6 @@ const SpatialZoomPresentation = () => {
 
   const nextSlide = useCallback(() => {
     if (view === 'bubbles') return;
-    // تحديث شروط العودة للقائمة بناءً على الترتيب الجديد (إضافة شريحة واحدة في البداية)
     if (activeIndex === 2 || activeIndex === 16 || activeIndex === 27 || activeIndex === 33) {
       handleBackToBubbles();
       return;
@@ -615,7 +608,6 @@ const SpatialZoomPresentation = () => {
 
   const prevSlide = useCallback(() => {
     if (view === 'bubbles') return;
-    // تحديث شروط العودة للقائمة عند الرجوع
     if (activeIndex === 3 || activeIndex === 17 || activeIndex === 28) {
       handleBackToBubbles();
       return;
@@ -627,7 +619,6 @@ const SpatialZoomPresentation = () => {
     }
   }, [view, activeIndex, handleBackToBubbles]);
 
-  // إضافة مستمع لأحداث لوحة المفاتيح
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
@@ -767,7 +758,6 @@ const SpatialZoomPresentation = () => {
             exit="exit"
             className={cn("absolute inset-0 w-full h-full flex flex-col items-center justify-center text-white z-20", currentSlideData.color, "p-8 md:p-20")}
           >
-            {/* الهيدر الموحد - يختفي في شريحة العنوان الرئيسية */}
             {currentSlideData.id !== 'main-title' && (
               <div className="absolute top-8 left-8 right-8 flex justify-between items-center border-b border-white/20 pb-6 z-20">
                 <div className="flex items-center gap-4">
@@ -786,7 +776,6 @@ const SpatialZoomPresentation = () => {
               </div>
             )}
 
-            {/* المحتوى */}
             <div className={cn(
               "relative z-10 w-full h-full flex flex-col justify-center items-center",
               currentSlideData.isFullImage ? "pt-20 pb-16 max-w-none" : 
@@ -873,7 +862,6 @@ const SpatialZoomPresentation = () => {
               )}
             </div>
 
-            {/* التحكم السفلي */}
             <div className="absolute bottom-8 left-8 right-8 flex justify-between items-center z-30">
               <div className="flex gap-4">
                 <button onClick={prevSlide} className="p-4 bg-white/20 rounded-full hover:bg-white/30 shadow-lg transition-all border border-white/10 backdrop-blur-md"><ChevronRight size={32} /></button>
