@@ -31,11 +31,13 @@ export default defineConfig(() => ({
       manifest: {
         name: 'نظام تسيير الأمانة',
         short_name: 'تسيير الأمانة',
-        description: 'نظام معلوماتي لمتابعة غيابات المتربصين - عرض مذكرة التخرج',
+        description: 'نظام معلوماتي لمتابعة غيابات المتربصين - عرض مذكرة التخرج (الدراسة التفصيلية)',
         theme_color: '#1d4ed8',
         background_color: '#ffffff',
         display: 'standalone',
         orientation: 'landscape',
+        start_url: '/',
+        scope: '/',
         dir: 'rtl',
         lang: 'ar',
         icons: [
@@ -61,7 +63,7 @@ export default defineConfig(() => ({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,json,woff2}'],
-        maximumFileSizeToCacheInBytes: 7 * 1024 * 1024, // 7MB لضمان استيعاب كافة المخططات
+        maximumFileSizeToCacheInBytes: 7 * 1024 * 1024,
         cleanupOutdatedCaches: true,
         skipWaiting: true,
         clientsClaim: true,
@@ -73,7 +75,7 @@ export default defineConfig(() => ({
               cacheName: 'images-cache',
               expiration: {
                 maxEntries: 50,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 يوم
+                maxAgeSeconds: 30 * 24 * 60 * 60,
               },
             },
           },
